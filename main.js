@@ -39,9 +39,9 @@ function rolar() {
     let dado10 = document.getElementById("dado10").value
     let dado12 = document.getElementById("dado12").value
 
-    if (dado6 > 0) rolar6(dado6)
-    if (dado10 > 0) rolar10(dado10)
-    if (dado12 > 0) rolar12(dado12)
+    rolar6(dado6)
+    rolar10(dado10)
+    rolar12(dado12)
 }
 
 
