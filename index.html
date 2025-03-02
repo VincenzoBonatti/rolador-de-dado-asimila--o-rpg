@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados Assimilação</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <button onclick="rolar()">Rolar dados</button>
+            <div class="content">
+                <div class="dado">
+                    <h1>D6</h1>
+                    <p>numero de dados: </p>
+                    <input type="number" id="dado6" placeholder="0" min="0">
+                </div>
+                <div class="dado">
+                    <h1>D10</h1>
+                    <p>numero de dados: </p>
+                    <input type="number" id="dado10" placeholder="0" min="0">
+                </div>
+                <div class="dado">
+                    <h1>D12</h1>
+                    <p>numero de dados: </p>
+                    <input type="number" id="dado12" placeholder="0" min="0">
+                </div>
+            </div>
+            <div class="resultados">
+                <div id="resultado6" class="result"></div>
+                <div id="resultado10" class="result"></div>
+                <div id="resultado12" class="result"></div>
+            </div>
+        </div>
+    </main>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>
