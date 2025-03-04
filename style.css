@@ -79,9 +79,9 @@ button:hover{
     width: 30%;
     flex-wrap: wrap;
     height: fit-content;
-    & p{
-        width: 10em;
-        height: 10em;
+    & .d{
+        min-width: 10em;
+        min-height: 10em;
         background-color: rgb(134, 134, 134);
         border: black 2px solid;
         border-radius: 15px;
@@ -92,6 +92,10 @@ button:hover{
         text-align: center;
         margin-bottom: 1em;
         font-weight: bold;
+        & img{
+            width: 8em;
+        }
     }
+
 }
 

@@ -1,36 +1,41 @@
+const adaptacao = '<img src="imagens/adaptacao.png">'
+const sucesso = '<img src="imagens/sucesso.png">'
+const pressao = '<img src="imagens/pressao.png">'
+const nada = "<p></p>"
+
 const d6 = [ 
-    "nada", 
-    "nada", 
-    "pressão", 
-    "pressão e adaptação", 
-    "pressão e adaptação", 
-    "sucesso"]
+    nada, 
+    nada, 
+    pressao, 
+    pressao + adaptacao, 
+    pressao + adaptacao, 
+    sucesso]
 
 const d10 = [ 
-    "nada", 
-    "nada", 
-    "pressão", 
-    "pressão e adaptação", 
-    "pressão adaptação", 
-    "sucesso", 
-    "sucesso sucesso", 
-    "sucesso adaptação", 
-    "sucesso pressão adaptação", 
-    "sucesso sucesso pressão"]
+    nada, 
+    nada, 
+    pressao, 
+    pressao + adaptacao, 
+    pressao + adaptacao, 
+    sucesso, 
+    sucesso + sucesso, 
+    sucesso + adaptacao, 
+    sucesso + pressao + adaptacao, 
+    sucesso + sucesso + pressao]
 
 const d12 = [ 
-    "nada", 
-    "nada", 
-    "pressão", 
-    "pressão e adaptação", 
-    "pressão e adaptação", 
-    "sucesso", 
-    "sucesso sucesso", 
-    "sucesso adaptação", 
-    "sucesso pressão adaptação", 
-    "sucesso sucesso pressão", 
-    "sucesso adaptação adaptação pressão", 
-    "pressão pressão"]
+    nada, 
+    nada, 
+    pressao, 
+    pressao + adaptacao, 
+    pressao + adaptacao, 
+    sucesso, 
+    sucesso + sucesso, 
+    sucesso + adaptacao, 
+    sucesso + pressao + adaptacao, 
+    sucesso + sucesso + pressao, 
+    sucesso + adaptacao + adaptacao + pressao, 
+    pressao + pressao]
 
 
 
@@ -51,8 +56,7 @@ function rolar6(dado6) {
     
     for (let i = 0; i < dado6; i++) {
         const index = Math.floor(Math.random() * d6.length);
-        rolagens += `<p>${d6[index]}</p>` 
-        console.log(rolagens)           
+        index >= 2 ? rolagens += `<div class="d">${d6[index]}</div>` : rolagens += `<div class="d">${d6[index]}</div>`         
     }
     document.getElementById("resultado6").innerHTML = rolagens
 }
@@ -62,8 +66,7 @@ function rolar10(dado10) {
     
     for (let i = 0; i < dado10; i++) {
         const index = Math.floor(Math.random() * d10.length);
-        rolagens += `<p>${d10[index]}</p>` 
-        console.log(rolagens)           
+        index >= 2 ? rolagens += `<div class="d">${d10[index]}</div>` : rolagens += `<div class="d">${d10[index]}</div>`        
     }
     document.getElementById("resultado10").innerHTML = rolagens
 }
@@ -73,8 +76,7 @@ function rolar12(dado12) {
     
     for (let i = 0; i < dado12; i++) {
         const index = Math.floor(Math.random() * d12.length);
-        rolagens += `<p>${d12[index]}</p>` 
-        console.log(rolagens)           
+        index >= 2 ? rolagens += `<div class="d">${d12[index]}</div>` : rolagens += `<div class="d">${d12[index]}</div>`       
     }
     document.getElementById("resultado12").innerHTML = rolagens
 }
